@@ -6,7 +6,7 @@ import 'authentication/firebase_options.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // CSCI 430: pingme
-// Name: Jorge Munoz, put your names here
+// Name: Jorge Munoz,
 
 // Jorge: Login with authentication is done. SucessPage() is a dummy
 //        home page I created. This is what needs to be replaced.
@@ -61,7 +61,6 @@ class _MyAppState extends State<MyApp> {
         home: StartupLogic().getLandingPage(context));
   }
 }
-
 
 
 
