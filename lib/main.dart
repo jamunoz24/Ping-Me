@@ -62,8 +62,6 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-
-
 // DUMMY HOME PAGE
 class SuccessPage extends StatefulWidget {
   const SuccessPage({Key? key}) : super(key: key);
