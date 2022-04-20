@@ -131,15 +131,4 @@ class HomeState extends State<HomePage> {
       ),
     );
   }
-  /*
-  _getCurrentLocation() {
-    Geolocator
-        .getCurrentPosition(desiredAccuracy: LocationAccuracy.best, forceAndroidLocationManager: true)
-        .then((Position position) {
-      setState(() {
-        _currentPosition = position;
-      });
-    });
-  }
-  */
 }

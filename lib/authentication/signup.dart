@@ -121,9 +121,22 @@ class _SignUpPageState extends State<SignUpPage> {
                                     email: emailController.text,
                                     password: passwordController.text);
                             _weakPass = _emailUsed = _emailInvalid = false;
-                            var firebaseUser = FirebaseAuth.instance.currentUser;
-                            if(firebaseUser != null) {
-                              await firestoreInstance.collection("userEmails").doc(firebaseUser.uid).set({"email" : emailController.text,});
+                            // ADDING USER TO FIRESTORE
+                            var firebaseUser =
+                                FirebaseAuth.instance.currentUser;
+                            if (firebaseUser != null) {
+                              await firestoreInstance
+                                  .collection("userEmails")
+                                  .doc(firebaseUser.uid)
+                                  .set({
+                                "email": emailController.text,
+                              });
+                              await firestoreInstance
+                                  .collection("userIDs")
+                                  .doc(emailController.text)
+                                  .set({
+                                "uid": firebaseUser.uid,
+                              });
                             }
                             setState(() {});
                             Navigator.pop(context);
