@@ -113,6 +113,7 @@ class _FriendsPageState extends State<FriendsPage> {
                                   "friendsList": FieldValue.arrayUnion(
                                       [emailController.text]),
                                 });
+                                setState(() {});
                                 Navigator.pop(context);
                               }
                             },
